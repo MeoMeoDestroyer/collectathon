@@ -10,7 +10,6 @@ I understand what the int new_x and int new_y mean when the treasure is 'caught'
 >>>>>>> f4d9309ccd4acb49ae22a642bef8dae8165e1f04
 
 ## Planning required changes
-
 ## Brainstorming game ideas
 
 ## Plan for implementing game
