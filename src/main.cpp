@@ -48,6 +48,9 @@ int main()
     bn::sprite_ptr player = bn::sprite_items::square.create_sprite(-50, 50);
     bn::sprite_ptr treasure = bn::sprite_items::dot.create_sprite(0, 0);
 
+    static constexpr int dot_X = 50;
+    static constexpr int dot_Y = -20;
+
     while (true)
     {
         // Move player with d-pad
