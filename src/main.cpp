@@ -70,6 +70,13 @@ int main()
         {
             player.set_y(player.y() + SPEED);
         }
+        if (bn::keypad::start_pressed())
+        {
+            // Reset the game
+            player.set_position(-50, 50);
+            treasure.set_position(dot_X, dot_Y);
+            score = 0;
+        }
 
         // The bounding boxes of the player and treasure, snapped to integer pixels
         bn::rect player_rect = bn::rect(player.x().round_integer(),
@@ -91,6 +98,7 @@ int main()
 
             score++;
         }
+    
 
         // Update score display
         bn::string<MAX_SCORE_CHARS> score_string = bn::to_string<MAX_SCORE_CHARS>(score);
