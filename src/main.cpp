@@ -88,6 +88,7 @@ int main()
                 player.set_y(MIN_Y);
             }
     }
+}
 
         // loop for min
         if (player.x() < MIN_X)
@@ -134,3 +135,4 @@ int main()
                 bn::core::update();
             }
         }
+    }
