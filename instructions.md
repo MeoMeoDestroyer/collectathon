@@ -1,5 +1,14 @@
 # Collectathon instructions
-An exercise for collaborating with git / GitHub. Please read the directions CAREFULLY! I recommend focusing on the changes to the README before reading the C++ code or running the game.
+An exercise for collaborating with git / GitHub. Please read the directions CAREFULLY!
+
+## Tip on vim:
+
+If you ever get to a point where it shows a commit message for you to edit (something like `Merge branch 'main' of https://github.com/example/repo`), you are in `vim`. To exit:
+1. Hit the escape key
+1. Type `:wq`
+1. Hit enter
+
+This is normal and can happen if you and your partner make diverging changes.
 
 ## Wave 1: Setup project
 1. Choose one partner to be Partner A, one partner to Partner B.
