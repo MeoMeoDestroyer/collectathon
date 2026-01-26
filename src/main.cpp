@@ -114,13 +114,21 @@ int main()
             --boost_frames_left;
         }
         if (bn::keypad::left_held())
+        {
             player.set_x(player.x() - current_speed);
         if (bn::keypad::right_held())
-            player.set_x(player.x() + current_speed);
+        {
+
+          player.set_x(player.x() + current_speed);
+        }
         if (bn::keypad::up_held())
+        {
             player.set_y(player.y() - current_speed);
+    }
         if (bn::keypad::down_held())
+        {
             player.set_y(player.y() + current_speed);
+        }
 
         // loop for min
         if (player.x() < MIN_X)
@@ -166,4 +174,5 @@ int main()
 
         bn::core::update();
     }
+}
 }
