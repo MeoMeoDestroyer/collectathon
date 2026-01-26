@@ -49,7 +49,7 @@ int main()
 {
     bn::core::init();
     // bg color
-    bn::bg_palettes::set_transparent_color(bn::color(7, 2, 8)); // dark blue
+    bn::bg_palettes::set_transparent_color(bn::color(7, 2, 8)); // dark purple
 
     bn::random rng = bn::random();
 
@@ -68,28 +68,6 @@ int main()
 
     while (true)
     {
-
-        // Reset the game
-        //     player.set_position(-50, 50);
-        //     treasure.set_position(dot_X, dot_Y);
-        //     score = 0;
-        // }
-
-        // while (bn::keypad::a_pressed())
-        // {
-        //     if (boost <= 3)
-        //     {
-        //         player.set_x(player.x() + SPEED * 2);
-        //         player.set_y(player.y() + SPEED * 2);
-        //     }
-        //     else
-        //     {
-        //         player.set_x(player.x() + SPEED);
-        //         player.set_y(player.y() + SPEED);
-        //     }
-        // }
-
-        // restart on start - score set to 0
         if (bn::keypad::start_pressed())
         {
             player.set_position(PLAYER_START_X, PLAYER_START_Y);
@@ -124,7 +102,7 @@ int main()
         if (bn::keypad::up_held())
         {
             player.set_y(player.y() - current_speed);
-    }
+        }
         if (bn::keypad::down_held())
         {
             player.set_y(player.y() + current_speed);
