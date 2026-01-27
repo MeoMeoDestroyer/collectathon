@@ -15,7 +15,7 @@
 #include "common_fixed_8x16_font.h"
 
 // Pixels / Frame player moves at
-static constexpr bn::fixed SPEED = 6;
+static constexpr bn::fixed SPEED = 3;
 
 // Width and height of the player and treasure bounding boxes
 static constexpr bn::size PLAYER_SIZE = {8, 8};
@@ -43,7 +43,7 @@ static constexpr int SCORE_Y = -70;
 // Boost settings
 static constexpr int BOOST_MAX_USES = 3;
 static constexpr int BOOST_DURATION_FRAMES = 60;
-static constexpr bn::fixed BOOST_SPEED = 10;
+static constexpr bn::fixed BOOST_SPEED = 6;
 
 int main()
 {
