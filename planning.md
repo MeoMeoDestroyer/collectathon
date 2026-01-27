@@ -22,13 +22,14 @@ Make a speed boost (A)
 ## Brainstorming game ideas
 I'm thinking add a boost count that will display the number of boost we have
 prob gonna be st like 3. // 2 // 1 // 0
-How about the screen shake when using boost 
+How about the screen shake when using boost  // not work! so hard
+make the player blink when using boost?
 
 
 ## Plan for implementing game
-boost count + shaky shaky when using boost
+boost count + blink when using boost
 - show 3 begining. maybe top left? or top right hmm.
 - go down 1 for each time using A
 - show 0 when out
-- screen shake when using boost
-shaky_x and y.   boost/frame_left using a_pressed()
+- player blink when usingboost
+

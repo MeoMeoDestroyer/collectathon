@@ -44,7 +44,6 @@ static constexpr int SCORE_Y = -70;
 static constexpr int BOOST_MAX_USES = 3;
 static constexpr int BOOST_DURATION_FRAMES = 60;
 static constexpr bn::fixed BOOST_SPEED = 10;
-static constexpr int SHAKE_DURATION = 12;
 
 int main()
 {
@@ -66,8 +65,6 @@ int main()
     // speed boost
     int boost_left = BOOST_MAX_USES;
     int boost_frames_left = 0;
-    // boost count and shake effect
-    int shake_frame_left = 0;
 
     while (true)
     {
@@ -78,7 +75,6 @@ int main()
             score = 0;
             boost_left = BOOST_MAX_USES;
             boost_frames_left = 0;
-            shake_frame_left = 0; // no more shaky when restarting
         }
 
         // boost when press A
@@ -93,7 +89,11 @@ int main()
         if (boost_frames_left > 0)
         {
             current_speed = BOOST_SPEED;
+            player.set_visible((boost_frames_left / 5) % 2 == 0); // blink effect
             --boost_frames_left;
+        }
+        else {
+            player.set_visible(true);
         }
         if (bn::keypad::left_held())
         {
@@ -154,6 +154,7 @@ int main()
         // Update RNG seed every frame so we don't get the same sequence of positions every time
         rng.update();
 
+        
         bn::core::update();
     }
 }
