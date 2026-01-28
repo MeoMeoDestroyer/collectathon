@@ -39,3 +39,7 @@ boost count + blink when using boost
 - show 0 when out
 - player blink when usingboost
 
+change sprite to orange when boosted
+add another sprite that slows character down, maybe color blue?
+try to see if i can add faster speed.
+
