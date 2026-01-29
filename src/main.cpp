@@ -85,7 +85,7 @@ int main()
             boost_frames_left = 0;
 
             player.set_visible(true);
-            bn::sprite_palette_fade_manager::set_intensity(0);
+      bn::sprite_palettes::set_fade(bn::color(31, 31, 31), 0);
         }
 
         // boost when press A
@@ -106,14 +106,14 @@ int main()
             player.set_visible((boost_frames_left / 5) % 2 == 0);
 
             // add a palette effect
-            bn::sprite_palettes::set_fade_intensity(0.3);   
+          bn::sprite_palettes::set_fade(bn::color(31, 31, 31), 0.3);
             --boost_frames_left;
         }
         else
         {
             player.set_visible(true);
             // reset palette effect when not boosted
-            bn::sprite_palettes::set_fade_intensity(0);
+        bn::sprite_palettes::set_fade(bn::color(31, 31, 31), 0);
         }
 
         // Horizontal move: use current_speed
