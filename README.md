@@ -1,9 +1,8 @@
-# The game called: Snake the Ks
+# The game called: Find the Treasure!
 sdev301
 
 # How to play the game?
-- Just use your imagination but in general it a simple game where you can have some boost if you wanna be faster but it limited to 3 times. 
-- and also will have 'slow' sprites which make player slower.
+- It's simple. Get the treasure as many times before the timer runs out. However, a dragon is guarding the treasure and will follow you. Also, there may be a treasure chest that doesn't give points, but rather slow down the player.
 
 Kate and Kelley 1-5 and 6
 Hopefully we finish this today 

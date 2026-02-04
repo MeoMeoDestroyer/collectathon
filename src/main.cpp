@@ -62,7 +62,7 @@ static constexpr int SLOW_DURATION_FRAMES = 90;
 static constexpr bn::fixed SLOW_SPEED = 1.5;
 
 // Timer settings
-static constexpr int TIMER_MAX_FRAMES = 900;
+static constexpr int TIMER_MAX_FRAMES = 1800;
 
 // Dragon chase speed
 static constexpr bn::fixed DRAGON_SPEED = 1.2;
@@ -249,11 +249,13 @@ int main()
                 player.set_y(MIN_Y);
             }
 
+            // DRAGON CHASING LOGIC
             // Calculate direction from dragon to player
             bn::fixed dx = player.x() - dragon.x();
             bn::fixed dy = player.y() - dragon.y();
+
+            // Normalize and move dragon toward player
             bn::fixed distance = bn::sqrt(dx * dx + dy * dy);
-            
             if (distance > 0)
             {
                 dragon.set_x(dragon.x() + (dx / distance) * DRAGON_SPEED);
